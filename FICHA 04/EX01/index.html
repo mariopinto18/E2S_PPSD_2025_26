@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TMB CALCULATOR</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+</head>
+
+<body>
+    <div style="background-color: LightGray;">
+        <div >
+            <h1 style="color: DodgerBlue;">TMB Calculator - Taxa Metabólica Basal</h1>
+            <p>Através da equuação de Mifflin-St. Jeor</p>
+            <p>Esta é uma equação preditiva para o gasto energético em indivíduos saudáveis que pretendem manter o peso.</p>
+            <a href="https://nutrium.com/blog/pt-pt/equacao-de-mifflin-st-jeor-para-profissionais-de-nutricao/">Equação de Mifflin-St. Jeor para profissionais de nutrição</a>
+            <br>
+        </div>
+    </div>
+    
+    <div>
+        <hr>
+        <br>
+        <form id="idForm">
+            <div>
+                <label for="txtGenero" class="form-label">Indique o Género:</label>
+                <select  id="idGenero">Selecione o Género
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="txtAltura" class="form-label">Indique a sua altura (cm)</label>
+                <input type="text" class="form-control" id="txtAltura" value="" size = "5" required>
+            </div>
+
+            <div>
+                <label for="txtPeso" class="form-label">Indique o seu peso (Kg)</label>
+                <input type="text" class="form-control" id="txtPeso" value=""  size = "4" required>
+            </div>
+            
+            <div>
+                <label for="txtIdade" class="form-label">Indique a sua idade</label>
+                <input type="text" class="form-control" id="txtIdade" value=""  mix = 18 max = 89 size = "2" required>
+            </div>
+
+            <div>            
+                <button class="btn"  style="background-color:  #008CBA; color: white;"  type="submit">Calcular TMB</button>
+            </div>
+
+            <div>
+                <br><br>
+                <label for="txtTMB" class="form-label"></label>
+                <input type="text" id="txtTMB" value=""  readonly="true" size = "5" style="font-weight:bold;"> Kcal/dia
+            </div>
+        </form>
+        <br>
+        <br>
+        <hr>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
