@@ -5,21 +5,20 @@ let nivel = 1
 const numPerguntas = 6
 
 //
-let perguntasSelecionadas = [];
+let perguntasSelecionadas = []; // vai conter as perguntas sorteadas
 let indiceAtual = 0;
 let pontuacao = 0;
 
 
-// Clicr no button Iniciar 
+// Clicar no button Iniciar 
 document.getElementById("iniciar").addEventListener("click", () => {
-    document.getElementById("iniciar").hidden = true;
-    document.getElementById("next").disabled = true;
-    document.getElementById("next").hidden = false;
+    document.getElementById("iniciar").hidden = true;  // esconde o button iniciar 
+    document.getElementById("next").hidden = false;    // mostra o button Próxima questão
     
     // seleciona perguntas do array de objetos
     perguntasSelecionadas = sortearPerguntas();
     
-    renderizarPergunta();
+    renderizarPergunta();     // renredizar a pergunta no card
     // quando clicar no button Próxima
     document.getElementById("next").addEventListener("click", proximaPergunta);
 
@@ -29,6 +28,7 @@ document.getElementById("iniciar").addEventListener("click", () => {
 
 // seleciona perguntas (numPerguntas:6), do nível "facil"
 function sortearPerguntas() {
+
     const quizz = quizData.filter(q => q.nivel === "facil");
     let totalPerguntas = quizz.length; // fico a saber quantas perguntam existem no nivel fácil
 
